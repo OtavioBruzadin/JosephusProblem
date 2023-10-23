@@ -13,6 +13,7 @@ public class Main {
                 "3. visualizar Lista \n" +
                 "4. Retirar soldado \n" +
                 "5. Encerrar Programa"
+
         );
         try {
             while (option != 5) {

@@ -111,6 +111,7 @@ class SoldierLinkedList {
         return survivingSoldier();
     }
 
+
     public void print(){
         SoldierNode pAnda;
         System.out.print("L: [ ");

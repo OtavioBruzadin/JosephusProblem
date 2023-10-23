@@ -9,6 +9,7 @@ public class Soldier {
     public Soldier() {
     }
 
+
     public Soldier(int codigo, String nome) {
         this.codigo = codigo;
         this.nome = nome;

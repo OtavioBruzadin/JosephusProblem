@@ -9,6 +9,7 @@ public class SoldierNode {
         this(null, null);
     }
 
+
     public SoldierNode(Soldier soldier, SoldierNode prox) {
         this.soldier = soldier;
         this.prox = prox;
