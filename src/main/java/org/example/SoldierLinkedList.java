@@ -109,6 +109,7 @@ class SoldierLinkedList {
             System.out.println("\n");
         }
         return survivingSoldier();
+
     }
 
 

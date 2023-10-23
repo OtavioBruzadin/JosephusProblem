@@ -47,7 +47,7 @@ public class Main {
                 }
                 if (option == 4) {
                     Soldier deadSoldier = soldierList.determineSoldier(6);
-                    System.out.println(deadSoldier);
+                    System.out.println(deadSoldier.getnome());
 
                 }
                 System.out.println("Obrigado por usar nosso programa :)");
@@ -56,6 +56,7 @@ public class Main {
         }catch (Exception exception){
             System.out.println("Epa algo deu errado");
         }
+        System.out.println("Obrigado por usar nosso programa :)");
         }
     }
 
