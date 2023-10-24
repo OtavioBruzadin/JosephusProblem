@@ -43,14 +43,25 @@ public class Main {
                     }
                 }
                 if (option == 3) {
-                    soldierList.print();
+                    int found = soldierList.searchName("Otavio");
+                    if(found!=-1){
+                        System.out.println("foi"+ found);
+                    }
                 }
                 if (option == 4) {
-                    Soldier deadSoldier = soldierList.determineSoldier(6);
-                    System.out.println(deadSoldier.getnome());
+
+                    int found = soldierList.searchName("Otavio");
+                    if(found!=-1){
+                        System.out.println("foi"+ found);
+                    }
+
+                    Soldier deadSoldier = soldierList.determineSoldier(6+found);
+
+                    System.out.println("O soldado "+deadSoldier.getnome()+" de id:"+ deadSoldier.getcodigo()+
+                            " Sobreviveu e vai pegar o Cavalo");
 
                 }
-                System.out.println("Obrigado por usar nosso programa :)");
+
             }
 
         }catch (Exception exception){

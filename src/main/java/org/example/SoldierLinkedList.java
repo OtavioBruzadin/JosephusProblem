@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 class SoldierLinkedList {
     private SoldierNode head;
     private int count;
@@ -57,6 +59,27 @@ class SoldierLinkedList {
         }
     }
 
+    public int searchName(String soldier){
+        SoldierNode pAnda;
+        int counter = 0;
+        try {
+            if (isEmpty()) {
+                return -1;
+            } else {
+                pAnda = head;
+                // procura a posição do elemento na lista
+                while ((pAnda.getProx() != head) && (!Objects.equals(pAnda.getSoldado().getnome(), soldier)))
+                    pAnda = pAnda.getProx();
+                counter++;
+                if (pAnda.getSoldado().getnome().equals(soldier))
+                    return counter; // Retorna a referência para o No
+                return -1; // elemento não encontrado
+            }
+        }catch (Exception exception){
+            return -1;
+        }
+    }
+
 
     public boolean remove(Soldier soldier){
         SoldierNode pAnt = null, pAnda;
@@ -102,13 +125,15 @@ class SoldierLinkedList {
                 if (pAnda == null) {
                     pAnda = head;
                 }
+                remove(pAnda.getSoldado());
+
                 counter++;
             }
-            remove(pAnda.getSoldado());
+
             print();
             System.out.println("\n");
         }
-        return survivingSoldier();
+        return head.getSoldado();
 
     }
 
